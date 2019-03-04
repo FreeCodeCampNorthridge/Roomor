@@ -1,5 +1,7 @@
 # Roomor
 > Find your next roommate!
+
+Struggling to find a roommate? Craiglist can be a hit or miss, find your ideal roommate on Roomor. Once you've found a match, apartment hunt together. From one bedrooms to two or more with better amenitites and locations.
 ## Tech Stack
 - [MongoDB](https://docs.mongodb.com/)
 - [Express.js](https://expressjs.com/)
