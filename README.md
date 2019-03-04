@@ -6,6 +6,7 @@ Struggling to find a roommate? Craiglist can be a hit or miss, find your ideal r
 - [MongoDB](https://docs.mongodb.com/)
 - [Express.js](https://expressjs.com/)
 - [React.js](https://reactjs.org/)
+- [Firebase](https://firebase.google.com/)
 - [Node.js](https://nodejs.org/en/)
 ## Features
 - [ ] Realtime Chat
