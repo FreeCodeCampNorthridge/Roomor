@@ -1,0 +1,12 @@
+{
+  "name": "roomorapi",
+  "version": "1.0.0",
+  "description": "ExpressJS based API for Roomor",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
