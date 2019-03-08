@@ -29,11 +29,12 @@ function Header(props) {
           <Typography variant="h6" color="inherit" className={classes.grow}>
             Roomor
           </Typography>
-          <Button color="inherit">
-            <Link to="/">Home</Link>
+          <Button component={Link} to="/" color="inherit">
+            Home
           </Button>
-          <Button color="inherit">
-            <Link to="/about">About</Link>
+          |
+          <Button component={Link} to="/about" color="inherit">
+            About
           </Button>
         </Toolbar>
       </AppBar>
