@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Header from './components/Header';
-import Home from './components/Home';
-import About from './components/About';
+import Landing from './pages/Index';
+import Home from './pages/Home';
+import About from './pages/About';
 import Footer from './components/Footer';
 import '@material-ui/core';
 
@@ -13,7 +14,8 @@ class App extends Component {
         <div>
           <Header />
           <Switch>
-            <Route exact path="/" component={Home} />
+            <Route exact path="/" component={Landing} />
+            <Route path="/home" component={Home} />
             <Route path="/about" component={About} />
           </Switch>
           <Footer />
