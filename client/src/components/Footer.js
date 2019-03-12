@@ -23,7 +23,7 @@ const Footer = props => {
   const { classes } = props;
   return (
     <div className={classes.root}>
-      <AppBar position="static">
+      <AppBar position="sticky">
         <Toolbar variant="dense">
           <Typography variant="h6" color="inherit">
             Footer
