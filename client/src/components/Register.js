@@ -54,21 +54,24 @@ const Register = props => {
       <Paper className={classes.paper}>
         <Avatar className={classes.avatar} />
         <Typography component="h1" variant="h5">
-          Sign in
+          Register
         </Typography>
         <form className={classes.form}>
           <FormControl margin="normal" required fullWidth>
-            <InputLabel htmlFor="email">Email Address</InputLabel>
-            <Input id="email" name="email" autoComplete="email" autoFocus />
+            <InputLabel htmlFor="">First Name</InputLabel>
+            <Input id="" name="" autoComplete="" autoFocus />
           </FormControl>
           <FormControl margin="normal" required fullWidth>
-            <InputLabel htmlFor="password">Password</InputLabel>
-            <Input
-              name="password"
-              type="password"
-              id="password"
-              autoComplete="current-password"
-            />
+            <InputLabel htmlFor="">Last Name</InputLabel>
+            <Input name="" type="text" id="" autoComplete="" />
+          </FormControl>
+          <FormControl margin="normal" required fullWidth>
+            <InputLabel htmlFor="">Email</InputLabel>
+            <Input name="" type="" id="" autoComplete="" />
+          </FormControl>
+          <FormControl margin="normal" required fullWidth>
+            <InputLabel htmlFor="">Password</InputLabel>
+            <Input name="" type="" id="" autoComplete="" />
           </FormControl>
           <FormControlLabel
             control={<Checkbox value="remember" color="primary" />}
@@ -81,7 +84,7 @@ const Register = props => {
             color="primary"
             className={classes.submit}
           >
-            Sign in
+            Sign Up
           </Button>
         </form>
       </Paper>
