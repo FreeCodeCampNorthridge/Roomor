@@ -6,17 +6,16 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Footer from './components/Footer';
 import '@material-ui/core';
-
 class App extends Component {
   render() {
     return (
       <Router>
-        <div>
+        <div className="App">
           <Header />
           <Switch>
-            <Route exact path="/" component={Landing} />
-            <Route path="/home" component={Home} />
-            <Route path="/about" component={About} />
+            <Route exact path="/" Component={Landing} />
+            <Route path="/home" Component={Home} />
+            <Route path="/about" Component={About} />
           </Switch>
           <Footer />
         </div>
@@ -24,4 +23,5 @@ class App extends Component {
     );
   }
 }
+
 export default App;
