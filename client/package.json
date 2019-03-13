@@ -1,19 +1,32 @@
 {
   "name": "client",
-  "version": "1.0.0",
-  "description": "React front end",
-  "main": "index.js",
-  "scripts": {
-    "start": "webpack-dev-server --mode development --open --hot",
-    "build": "webpack --mode production",
-    "json:server": "json-server --watch ../api/db.json"
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@material-ui/core": "^3.9.2",
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "2.1.8"
   },
-  "keywords": [
-    "React"
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "json:server": "json-server --watch ../api/db.json --port 8080"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
   ],
-  "author": "Tyroo West",
-  "license": "MIT",
   "devDependencies": {
+<<<<<<< HEAD
     "@babel/core": "^7.3.4",
     "@babel/preset-env": "^7.3.4",
     "@babel/preset-react": "^7.0.0",
@@ -27,5 +40,8 @@
   "dependencies": {
     "react": "^16.8.3",
     "react-dom": "^16.8.3"
+=======
+    "json-server": "^0.14.2"
+>>>>>>> issue/landingPage
   }
 }
