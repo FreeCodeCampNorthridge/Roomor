@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "kill": "kill-port 3000 3001 9229",
     "start": "node server/server",
-    "dev": "npm run kill && concurrently \"cd server && nodemon --inspect server\" \"cd client && npm start\"",
+    "dev": "npm run kill && concurrently \"cd server && nodemon\" \"cd client && npm start\"",
     "install-all": "npm i && cd server && npm i && cd ../client && npm i"
   },
   "repository": {
