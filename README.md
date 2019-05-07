@@ -16,6 +16,6 @@ Struggling to find a roommate? Craiglist can be a hit or miss, find your ideal r
 Make sure that you have Git, Node.js and MongoDB installed. Then in your terminal run the following:
 
 1. ```$ git clone git@github.com:FreeCodeCampNorthridge/Roomor.git```
-2. ```$ npm run install-all```
-3. ```$ mongod```
+2. ```$ mongod```
+3. ```$ npm run install-all```
 4. ```$ npm run dev```
