@@ -4,10 +4,11 @@ const express = require('express'),
   PORT = process.env.PORT || 3000;
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+// ============ MongoDB config ==============
 const url = process.env.DATABASEURL || 'mongodb://localhost/roomor';
 mongoose.connect(url, { useNewUrlParser: true });
+// ============ db Models =================
 const db = require('./models/');
-
 // ============ ROUTES ==================
 // get users
 app.get('/api/users', (req, res) => {
