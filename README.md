@@ -1,33 +1,21 @@
 # Roomor
 
-> Find your next roommate!
+## Find your next roommate!
 
 Struggling to find a roommate? Craiglist can be a hit or miss, find your ideal roommate on Roomor. Once you've found a match, apartment hunt together. From one bedrooms to two or more with better amenitites and locations.
 
-## Front End Contributors
-
-[@T-Wesst](https://github.com/T-Wesst)
-
-## Back End Contributors
-
-[@kervin5](https://github.com/kervin5)
-
-## Tech Stack
+## Tech Stack MERN
 
 - [MongoDB](https://docs.mongodb.com/)
 - [Express.js](https://expressjs.com/)
 - [React.js](https://reactjs.org/)
-- [Material-UI](https://material-ui.com/)
-- [Firebase](https://firebase.google.com/)
 - [Node.js](https://nodejs.org/en/)
+- [Material-UI](https://material-ui.com/)
 
-## Features
+## Getting Started
+Make sure that you have Git, Node.js and MongoDB installed. Then in your terminal run the following:
 
-- [ ] Realtime Chat
-- [ ] GEO Location
-
-## Tech Specs
-
-- [Socket.io](https://socket.io/)
-- [Google Maps](https://developers.google.com/maps/documentation/)
-- [Virtual Reality](https://developers.google.com/vr/)
+1. ```$ git clone git@github.com:FreeCodeCampNorthridge/Roomor.git```
+2. ```$ npm run install-all```
+3. ```$ mongod```
+4. ```$ npm run dev```
