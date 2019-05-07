@@ -1,7 +1,7 @@
 const express = require('express'),
   mongoose = require('mongoose'),
   app = express(),
-  PORT = process.env.PORT || 30001;
+  PORT = process.env.PORT || 3001;
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 // ============ MongoDB config ==============
