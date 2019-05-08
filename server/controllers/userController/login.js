@@ -1,4 +1,5 @@
 const { User } = require('../../models');
+// const { validToken, createToken } = require('./tokenService');
 
 module.exports = function(req, res) {
   console.log('hit login');
