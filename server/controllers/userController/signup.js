@@ -11,7 +11,7 @@ module.exports = function(req, res) {
         maxAge: 1000 * 60 * 60,
         httpOnly: true // on dev
       });
-      res.send({ message: `${user} was created` });
+      res.send({ username: user.username, firstname: user.firstName });
       // res.redirect('/users/someAuthorizedRoute')
     })
     .catch(err => {
