@@ -1,5 +1,5 @@
 const { User } = require('../../models');
-const { createToken, cookieOptions } = require('./tokenService');
+const { createToken, cookieOptions } = require('../../utilities/tokenService');
 
 const signup = async function(req, res) {
   try {
