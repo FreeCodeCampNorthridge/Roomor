@@ -1,20 +1,9 @@
 const { Schema, model } = require('mongoose');
 
 const userSchema = new Schema({
-  firstName: { type: String, required: true, trim: true },
-  lastName: { type: String, required: true, trim: true },
-  username: { type: String, required: true, trim: true },
-  email: {
-    type: String,
-    required: true,
-    match: [/.+@.+\..+/, 'Please enter a valid e-mail address']
-  },
-  password: {
-    type: String,
-    required: true,
-    trim: true,
-    validate: [input => input.length >= 6, 'password should be longer.']
-  },
+  username: { type: String, unique: true, required: true },
+  email: { type: String, required: true, unique: true },
+  password: { type: String, required: true, unique: true },
   userCreated: { type: Date, default: Date.now }
 });
 

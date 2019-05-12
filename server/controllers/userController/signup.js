@@ -6,8 +6,7 @@ const signup = async function(req, res) {
     let user = await User.create(req.body);
     let token = createToken(user);
     res.cookie('token', token, cookieOptions);
-    // res.redirect('/users/authorized');
-    res.send({ username: user.username });
+    res.redirect('/users/authorized');
   } catch (err) {
     if (err) throw err;
   }
