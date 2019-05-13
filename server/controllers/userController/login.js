@@ -1,5 +1,13 @@
 const { User } = require('../../models');
-const { createToken, cookieOptions } = require('../../utilities/tokenService');
+const { createToken } = require('../../utilities/tokenService');
+
+const cookieOptions = {
+  httpOnly: true,
+  // secure: true, on deployment
+  signed: true,
+  maxAge: (1000 * 60) ^ 60,
+  expiresIn: new Date(Date.now() + 90000)
+};
 
 const login = async function(req, res) {
   try {
@@ -7,17 +15,15 @@ const login = async function(req, res) {
     let user = await User.findOne({ username: req.body.username });
     // use checkPassword from UserSchema to compare supplied password with hashed via bcrypt
     let matchedPassword = await user.checkPassword(req.body.password);
-    console.log(user.password);
-    console.log(matchedPassword);
     // if password is correct
     if (matchedPassword) {
       // create token with createToken from token service
-      let token = createToken(user.password);
+      let token = await createToken(user);
       // respond to client with cookie containing token
       // cookie should be httpOnly and secure
       res.cookie('token', token, cookieOptions);
       // res.redirect('/authorized);
-      res.redirect('/users/authorized');
+      res.redirect('/api/users/authorized');
     } else {
       // passwords don't match send error
       res.send('Sorry, the username or password is invalid');

@@ -2,17 +2,13 @@ require('dotenv').config();
 const jwt = require('jsonwebtoken'),
   { SECRET } = process.env;
 
-const cookieOptions = {
-  httpOnly: true,
-  // secure: true, on deployment
-  signed: true,
-  maxAge: (1000 * 60) ^ 60,
-  expiresIn: new Date(Date.now() + 90000)
-};
-
 async function createToken(user) {
   try {
-    jwt.sign({ user, exp: Math.floor(Date.now() / 1000) + 60 * 60 }, SECRET);
+    let token = await jwt.sign(
+      { user, exp: Math.floor(Date.now() / 1000) + 60 * 60 },
+      SECRET
+    );
+    return token;
   } catch (err) {
     if (err) throw err;
   }
@@ -29,6 +25,5 @@ async function validToken(token) {
 
 module.exports = {
   validToken,
-  createToken,
-  cookieOptions
+  createToken
 };

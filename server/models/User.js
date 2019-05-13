@@ -30,7 +30,6 @@ UserSchema.methods.checkPassword = async function(potentialPassword) {
   try {
     // compare potential password to this password
     let match = await comparePassword(potentialPassword, this.password);
-    console.log(match);
     return match;
   } catch (err) {
     if (err) throw err;
