@@ -2,10 +2,11 @@ const { User } = require('../../models'),
   { validToken } = require('../../utilities/tokenService');
 
 const cookieChecker = async function(req, res) {
+  console.log(req.signedCookies);
   try {
     // /authorized route takes signedCookies from request object and token from signedCookies
-    let token = req.signedCookies.token;
-    console.log(token); // returns empty object
+    // console.log(req.cookies);
+    // returns empty object
     // if (token) {
     //   try {
     //     // tokenService.validToken(token).then(user)
