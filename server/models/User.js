@@ -1,30 +1,39 @@
 const { Schema, model } = require('mongoose');
+const {
+  hashPassword,
+  comparePassword
+} = require('../utilities/passwordService');
 
-const userSchema = new Schema({
+const UserSchema = new Schema({
   username: { type: String, unique: true, required: true },
   email: { type: String, required: true, unique: true },
   password: { type: String, required: true, unique: true },
   userCreated: { type: Date, default: Date.now }
 });
 
-// UserSchema.pre('save', function(next) {
-//   var user = this;
-//   if (!user.isModified('password')) return next();
-//   bcrypt.genSalt(SALT_ROUNDS, function(err, salt) {
-//     if (err) return next(err);
-//     bcrypt.hash(user.password, salt, function(err, hash) {
-//       if (err) return next(err);
-//       user.password = hash;
-//       next();
-//     });
-//   });
-// });
+// before saving user to DB
+UserSchema.pre('save', async function(next) {
+  // if the users password is not modified move onto next
+  if (!this.isModified('password')) return next();
+  // hash the password
+  try {
+    let hash = await hashPassword(this.password);
+    this.password = hash;
+    next();
+  } catch (err) {
+    if (err) throw err;
+  }
+});
 
-// UserSchema.methods.comparePassword = function(candidatePassword, cb) {
-//   bcrypt.compare(candidatePassword, this.password, function(err, isMatch) {
-//     if (err) throw err;
-//     cb(null, isMatch);
-//   });
-// };
+// create comparePassword method
+UserSchema.methods.comparePassword = async function(potentialPassword) {
+  try {
+    // compare potential password to current password
+    let match = await comparePassword(potentialPassword, this.password);
+    return match;
+  } catch (err) {
+    if (err) throw err;
+  }
+};
 
-module.exports = model('User', userSchema);
+module.exports = model('User', UserSchema);
