@@ -6,7 +6,7 @@ const {
   remove
 } = require('./../controllers/userController');
 
-// router.post('/login', login);
+router.post('/login', login);
 // router.get('/logout', logout);
 router.post('/signup', signup);
 // router.put('/edit/:id', edit);

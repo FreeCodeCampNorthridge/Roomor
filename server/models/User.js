@@ -26,10 +26,11 @@ UserSchema.pre('save', async function(next) {
 });
 
 // create comparePassword method
-UserSchema.methods.comparePassword = async function(potentialPassword) {
+UserSchema.methods.checkPassword = async function(potentialPassword) {
   try {
-    // compare potential password to current password
+    // compare potential password to this password
     let match = await comparePassword(potentialPassword, this.password);
+    console.log(match);
     return match;
   } catch (err) {
     if (err) throw err;
