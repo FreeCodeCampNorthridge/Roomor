@@ -71,48 +71,46 @@ class SignUp extends Component {
           <Typography component="h1" variant="h5">
             Sign Up
           </Typography>
-          <form className={classes.form}>
-            <FormControl margin="normal" required fullWidth>
-              <InputLabel htmlFor="email">Email Address</InputLabel>
-              <Input
-                id="email"
-                name="email"
-                autoComplete="email"
-                autoFocus
-                onChange={event => this.handleChange(event, 'email')}
-              />
-            </FormControl>
-            <FormControl margin="normal" required fullWidth>
-              <InputLabel htmlFor="username">Username </InputLabel>
-              <Input
-                id="username"
-                name="username"
-                autoComplete="username"
-                autoFocus
-                onChange={event => this.handleChange(event, 'username')}
-              />
-            </FormControl>
-            <FormControl margin="normal" required fullWidth>
-              <InputLabel htmlFor="password">Password</InputLabel>
-              <Input
-                name="password"
-                type="password"
-                id="password"
-                onChange={event => this.handleChange(event, 'password')}
-                autoComplete="current-password"
-              />
-            </FormControl>
-            <Button
-              type="submit"
-              fullWidth
-              variant="contained"
-              color="primary"
-              className={classes.submit}
-              onClick={this.handleSubmit}
-            >
-              Sign Up
-            </Button>
-          </form>
+          <FormControl margin="normal" required fullWidth>
+            <InputLabel htmlFor="email">Email Address</InputLabel>
+            <Input
+              id="email"
+              name="email"
+              autoComplete="email"
+              autoFocus
+              onChange={event => this.handleChange(event, 'email')}
+            />
+          </FormControl>
+          <FormControl margin="normal" required fullWidth>
+            <InputLabel htmlFor="username">Username </InputLabel>
+            <Input
+              id="username"
+              name="username"
+              autoComplete="username"
+              autoFocus
+              onChange={event => this.handleChange(event, 'username')}
+            />
+          </FormControl>
+          <FormControl margin="normal" required fullWidth>
+            <InputLabel htmlFor="password">Password</InputLabel>
+            <Input
+              name="password"
+              type="password"
+              id="password"
+              onChange={event => this.handleChange(event, 'password')}
+              autoComplete="current-password"
+            />
+          </FormControl>
+          <Button
+            type="submit"
+            fullWidth
+            variant="contained"
+            color="primary"
+            className={classes.submit}
+            onClick={this.handleSubmit}
+          >
+            Sign Up
+          </Button>
         </Paper>
       </main>
     );
